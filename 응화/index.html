@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>TodayDress</title>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+</head>
+
+<body onload="DisplayDate();">
+    <!-- <h1>로컬스토리지 저장 테스트</h1>
+    <form class="InputArea">
+        <input type="text" placeholder="상품명" class="goods" />
+        <input type="date" placeholder="구매일" class="purchase" />
+        <input type="text" placeholder="태그" class="tag" />
+        <input type="text" placeholder="설명" class="description" />
+        <button onclick="handleSubmit();">aa</button>
+    </form>
+    <ul class="List">
+
+    </ul> -->
+
+    <div id="Wrapper">
+        <div id="project_name">
+            <span class="heading_1">Today</span>
+            <span class="heading_2">Dress</span>
+        </div>
+
+        <div id="toggle">
+            <label class="switch">
+                <input type="checkbox" id="test" onchange="ToggleEvent();">
+                <span class="slider round"></span>
+            </label>
+            <div id="toggletext">
+                <span class="toggletext t1">Main</span>
+                <span class="toggletext t2">Contact</span>
+            </div>
+        </div>
+
+        <div id="date">
+        </div>
+
+        <div id="MainComponent">
+            <div class="ElementWrapper">
+                <a href="./pages/hat.html">
+                    <div class="imgarea" id="hat"></div>
+                </a>
+                <div class="name">모자</div>
+            </div>
+            <div class="ElementWrapper">
+                <a href="./pages/neck.html">
+                    <div class="imgarea" id="neck"></div>
+                </a>
+                <div class="name">목/악세서리</div>
+            </div>
+            <div class="ElementWrapper">
+                <a href="./pages/top.html">
+                    <div class="imgarea" id="top"></div>
+                </a>
+                <div class="name">상의</div>
+            </div>
+            <div class="ElementWrapper">
+                <a href="./pages/bottom.html">
+                    <div class="imgarea" id="bottom"></div>
+                </a>
+                <div class="name">하의</div>
+            </div>
+            <div class="ElementWrapper last">
+                <a href="./pages/shoes.html">
+                    <div class="imgarea" id="shoes"></div>
+                </a>
+                <div class="name">신발</div>
+            </div>
+
+
+        </div>
+
+        <div id="ContactComponent">
+            <div id="CC_wrapper">
+                <div id="contents_wrapper">
+                    <label>내용</label>
+                    <textarea id="contents_input" rows="15" cols="35"></textarea>
+                </div>
+                <div id="question_wrapper">
+                    <span>문의 분류</span>
+                    <input type="radio" id="business_contact" name="question" value="사업제안" />
+                    <label for="business_contact">사업 제안</label>
+                    <input type="radio" id="consult" name="question" value="일반문의" />
+                    <label for="consult">일반 문의</label>
+                </div>
+                <div id="input_wrapper" class="input">
+                    <label>이름</label>
+                    <input type="text" id="name_input" />
+                </div>
+                <div id="tel_wrapper" class="input">
+                    <label>전화번호</label>
+                    <input type="tel" id="tel_input" />
+                </div>
+                <div id="email_wrapper" class="input">
+                    <label>이메일</label>
+                    <input type="email" id="email_input" />
+                </div>
+
+                <input type="button" id="submit" value="확인" onclick="ConsultApply();" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

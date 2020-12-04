@@ -1,0 +1,201 @@
+body{
+    background-color: #000733;
+    font-family: 'NanumSquare', sans-serif !important;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* 스크롤 감추기 */
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+#Wrapper{
+    display: inline-block;
+    width: 850px;
+    height: 100%;
+    padding-bottom: 40px;
+}
+#project_name{
+    font-size: 50px;
+    font-weight: 1000;
+    margin-top: 50px;
+}
+
+.heading_1{
+    color: #ffffff;
+}
+
+.heading_2{
+    color: #9497FF;
+}
+
+#date{
+    color: #A7A7A7;
+    margin-bottom: 45px;
+}
+
+/* toggle */
+
+#toggle{
+    margin: 20px 0 25px 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+}
+
+.switch input { 
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3B4060;
+    -webkit-transition: .6s;
+    transition: .6s;
+}
+
+.slider:before {
+    color: white;
+    position: absolute;
+    content: "";
+    height: 50px;
+    width: 90px;
+    left: 0;
+    bottom: 0;
+    background-color: #4556C1;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(70px);
+    -ms-transform: translateX(70px);
+    transform: translateX(70px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 100px;
+}
+
+.switchtext {
+    z-index: 10;
+    color: white;
+}
+
+.toggletext{
+    position: relative;
+    top: -34px;
+    font-size: 13px;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.t1{
+    left: -10px;
+}
+
+.t2{
+    left: 20px;
+}
+
+.area {
+    display: inline-block;
+    width: 280px;
+    height: 200px;
+    background-color: #3B4060;
+    margin: 20px 0 15px 0;
+    border-radius: 25px;
+    transition: transform 0.3s;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all 0.3s;
+}
+
+.area:hover{
+    transform: scale(1.02);
+}
+
+#MainComponent{
+   position: relative;
+   padding: 0 120px;
+}
+
+#append{
+    display: table  ;
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    background-color: #3B4060;
+    border-radius: 100px;
+    color: white;
+    font-size: 45px;
+    position: fixed;
+    right: 90px;
+    bottom:40px;
+    transition: all 0.3s;
+}
+
+#append:hover{
+    background-color: #4e5479;
+    transform: scale(1.05);
+}
+
+#append i{
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    top: 3px;
+}
+
+#topic{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.day{
+    position: relative;
+    left: 20px;
+    text-align: left;
+    color: #b4b8d1;
+}
+
+.tag{
+    position: relative;
+    top: -17px;
+    right: 20px;
+    text-align: right;
+    color: #b4b8d1;
+}
+
+.name{
+    position: relative;
+    top: 166px;
+    left: 20px;
+    text-align: left;
+}
+
+.ElementWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

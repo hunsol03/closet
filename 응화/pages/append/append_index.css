@@ -1,0 +1,186 @@
+body{
+    background-color: #000733;
+    font-family: 'NanumSquare', sans-serif !important;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* 스크롤 감추기 */
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+#Wrapper{
+    display: inline-block;
+    width: 850px;
+    height: 100%;
+}
+#project_name{
+    font-size: 50px;
+    font-weight: 1000;
+    margin-top: 50px;
+}
+
+.heading_1{
+    color: #ffffff;
+}
+
+.heading_2{
+    color: #9497FF;
+}
+
+#date{
+    color: #A7A7A7;
+    margin-bottom: 45px;
+}
+
+/* toggle */
+
+#toggle{
+    margin: 20px 0 25px 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+}
+
+.switch input { 
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3B4060;
+    -webkit-transition: .6s;
+    transition: .6s;
+}
+
+.slider:before {
+    color: white;
+    position: absolute;
+    content: "";
+    height: 50px;
+    width: 90px;
+    left: 0;
+    bottom: 0;
+    background-color: #4556C1;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(70px);
+    -ms-transform: translateX(70px);
+    transform: translateX(70px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 100px;
+}
+
+.switchtext {
+    z-index: 10;
+    color: white;
+}
+
+.toggletext{
+    position: relative;
+    top: -34px;
+    font-size: 13px;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.t1{
+    left: -10px;
+}
+
+.t2{
+    left: 20px;
+}
+
+.area {
+    display: inline-block;
+    width: 280px;
+    height: 200px;
+    background-color: #3B4060;
+    margin: 20px 0 15px 0;
+    border-radius: 25px;
+    transition: transform 0.3s;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+#MainComponent{
+   position: relative;
+}
+
+#topic{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.InputArea{
+    margin-top: 15px;
+}
+
+.InputArea input{
+    background-color: #3B4060;
+    padding: 10px 20px;
+    border-radius: 25px;
+    width: 240px;
+    border: none;
+    font-size: 13px;
+    color: white;
+    margin: 10px 60px 5px 0;
+}
+
+.InputArea input:focus{
+    outline: none;
+}
+
+.InputArea label{
+    margin-right: 15px;
+}
+
+.tag_label{
+    margin-left: 15px;
+}
+
+.append_btn{
+    margin: 15px;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #3B4060;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.append_btn:hover{
+    background-color:#595f86;
+    transform: scale(1.03);
+}
+
+.append_btn:focus{
+    outline: none;
+}

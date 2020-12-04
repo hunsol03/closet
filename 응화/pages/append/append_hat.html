@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>TodayDress</title>
+    <script type="text/javascript" src="append_index.js"></script>
+    <link rel="stylesheet" type="text/css" href="append_index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+</head>
+
+<body onload="DisplayDate();">
+    <div id="Wrapper">
+        <div id="project_name">
+            <span class="heading_1">Today</span>
+            <span class="heading_2">Dress</span>
+        </div>
+
+        <div id="toggle">
+            <label class="switch">
+                <input type="checkbox" id="test" onchange="ToggleEvent();">
+                <span class="slider round"></span>
+            </label>
+            <div id="toggletext">
+                <span class="toggletext t1">Main</span>
+                <span class="toggletext t2">Contact</span>
+            </div>
+        </div>
+
+        <div id="date">
+        </div>
+
+        <div id="topic">제품 추가하기 - 모자</div>
+
+        <form class="InputArea">
+            <div class="area"></div>
+            <br />
+            <label class="goods_label">상품명</label>
+            <input type="text" placeholder="상품명 (최대 10자)" class="goods" maxlength="10" />
+            <br />
+            <label class="purchase_label">구매일</label>
+            <input type="date" placeholder="구매일" class="purchase" />
+            <br />
+            <label class="tag_label">태그</label>
+            <input type="text" placeholder="태그 (최대 10자)" class="tag" maxlength="10" />
+            <br />
+            <button onclick="handleSubmit();" class="append_btn">추가하기</button>
+        </form>
+
+
+        <script>
+            const Area = document.querySelector('.InputArea'),
+                Goods = Area.querySelector(".goods"),
+                Purchase = Area.querySelector(".purchase"),
+                Tag = Area.querySelector(".tag");
+
+            const EL_LS = 'Element';
+
+            let Element = [];
+            function saveElements() {
+                localStorage.setItem(EL_LS, JSON.stringify(Element));
+            }
+
+
+            function paintElement(text1, text2, text3, category) {
+                const ElObj = {
+                    goods: text1,
+                    purchase: text2,
+                    tag: text3,
+                    category: category,
+                    id: Element.length + 1
+                }
+
+                Element.push(ElObj);
+                saveElements();
+            }
+
+            function handleSubmit() {
+                event.preventDefault();
+                const TGoods = Goods.value;
+                const TPurchase = Purchase.value;
+                const TTag = Tag.value;
+                const category = 'hat';
+                if (!TGoods || !TPurchase || !TTag) {
+                    alert('데이터를 모두 입력해주세요.');
+                }
+                else {
+                    paintElement(TGoods, TPurchase, TTag, category);
+                    alert("추가완료");
+                    window.location.href = "../hat.html";
+                }
+            }
+
+            function loadList() {
+                const getList = JSON.parse(localStorage.getItem(EL_LS));
+                if (getList === null) {
+
+                } else {
+                    getList.forEach(function (el) {
+                        paintElement(el.goods, el.purchase, el.tag, el.category);
+                    })
+                }
+            }
+
+            function init() {
+                loadList();
+            }
+
+            init();
+        </script>
+    </div>
+</body>
+
+</html>
