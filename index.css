@@ -1,0 +1,297 @@
+body{
+    background-color: #000733;
+    font-family: 'NanumSquare', sans-serif !important;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* 스크롤 감추기 */
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+#Wrapper{
+    display: inline-block;
+    width: 850px;
+    height: 100%;
+}
+#project_name{
+    font-size: 50px;
+    font-weight: 1000;
+    margin-top: 50px;
+}
+
+.heading_1{
+    color: #ffffff;
+}
+
+.heading_2{
+    color: #9497FF;
+}
+
+#date{
+    color: #A7A7A7;
+    margin-bottom: 45px;
+}
+
+/* toggle */
+
+#toggle{
+    margin: 20px 0 25px 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+}
+
+.switch input { 
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3B4060;
+    -webkit-transition: .6s;
+    transition: .6s;
+}
+
+.slider:before {
+    color: white;
+    position: absolute;
+    content: "";
+    height: 50px;
+    width: 90px;
+    left: 0;
+    bottom: 0;
+    background-color: #4556C1;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(70px);
+    -ms-transform: translateX(70px);
+    transform: translateX(70px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 100px;
+}
+
+.switchtext {
+    z-index: 10;
+    color: white;
+}
+
+.toggletext{
+    position: relative;
+    top: -34px;
+    font-size: 13px;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.t1{
+    left: -10px;
+}
+
+.t2{
+    left: 20px;
+}
+
+
+/* component visibility */
+
+#MainComponent{
+   position: relative;
+}
+
+/* 요소 하나당 255px씩 추가*/
+#ContactComponent{
+    display: inline-block;
+    visibility: hidden;
+    position: absolute;
+    top: 354px; 
+    margin-left: -210px;
+    
+}
+
+/* MainComponent */
+
+.ElementWrapper{
+    margin-top: 15px;
+}
+
+.imgarea {
+    display: inline-block;
+    width: 280px;
+    height: 200px;
+    background-color: #3B4060;
+    margin: 20px 0 5px 0;
+    border-radius: 25px;
+    transition: transform 0.3s;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.imgarea:hover{
+    transform: scale(1.02);
+}
+
+#hat{
+    background-image: url('./assets/img/hat.png');
+}
+
+#neck{
+    background-image: url('./assets/img/hat.png');
+}
+
+#top{
+    background-image: url('./assets/img/hat.png');
+}
+
+#bottom{
+    background-image: url('./assets/img/hat.png');
+}
+
+#shoes{
+    background-image: url('./assets/img/hat.png');
+}
+
+.last{
+    margin-bottom: 50px;
+}
+/*Contact Component*/
+
+
+#contents_wrapper label{
+    position: relative;
+    top: -130px;
+    right: 10px;
+    color: #A7A7A7;
+}
+
+#contents_input{
+    background-color: #3B4060;
+    padding: 20px;
+    border-radius: 25px;
+    resize: none;
+    border: none;
+    font-size: 13px;
+    color: white;
+}
+
+#contents_input:focus{
+    outline: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+#contents_input::-webkit-scrollbar {
+  width: 0px;
+}
+
+#question_wrapper{
+    margin: 24px;
+}
+
+#question_wrapper span{
+    color: #A7A7A7;
+}
+
+#question_wrapper input[type="radio"]{
+    display: none;
+}
+
+#question_wrapper input[type="radio"]:checked + label{
+    background-color: #7D90CC;
+}
+
+#question_wrapper label{
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color:#3B4060;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+#question_wrapper label:hover{
+    background-color:#595f86;
+}
+
+#input_wrapper label{
+    position: relative;
+    right: 10px;
+    color: #A7A7A7;
+}
+
+#name_input, #tel_input, #email_input{
+    background-color: #3B4060;
+    padding: 12px 20px;
+    border-radius: 25px;
+    width: 264px;
+    border: none;
+    font-size: 13px;
+    color: white;
+}
+
+
+#tel_wrapper{
+     position: relative;
+    right: 15px;
+}
+
+#tel_wrapper label{
+    position: relative;
+    right: 10px;
+    color: #A7A7A7;
+}
+
+#email_wrapper{
+     position: relative;
+    right: 7px;
+}
+
+#email_wrapper label{
+    position: relative;
+    right: 10px;
+    color: #A7A7A7;
+}
+
+.input{
+    margin: 10px;
+}
+
+#submit{
+    color: white;
+    width: 100px;
+    height: 40px;
+    background-color: #3B4060;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit:hover{
+    background-color:#595f86;
+}
